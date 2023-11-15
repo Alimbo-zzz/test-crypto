@@ -1,0 +1,103 @@
+.select-inp{
+	display: flex;
+	align-items: center;
+	padding: 0;
+	gap: 10px;
+	flex:1;
+	position: relative;
+
+	background:	#F6F7F8;
+	border: 1px solid #C1D9E5;
+	border-radius: $radius;
+	padding: $padding;
+
+
+
+	&__preview{
+		display: flex;
+		gap: 15px;
+		width: 200px;
+		position: relative;
+		align-items: center;
+		justify-content: flex-end;
+		cursor: pointer;
+
+		&::before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			height: 90%;
+			width: 1.5px;
+			background: #C1D9E5;
+		}
+
+		text-transform: uppercase;
+
+
+		[data-img='logo']{
+			width: 25px;
+			aspect-ratio: 1/1;
+			object-fit: cover;
+		}
+		[data-img='arrow']{
+			width: 16px;
+			object-fit: cover;
+		}
+	}
+
+	input{
+		background: none;
+		border: none;
+		display: block;
+		width: 100%;
+	}
+
+
+
+
+	ul{
+		position: absolute;
+		bottom: 0;left: 0;
+		width: 100%;
+		height: 200px;
+		transform-origin: center top;
+		transform: translateY(100%) scaleY(0);
+		background: inherit;
+		border: inherit;
+		padding: 5px 10px;
+		display: flex;
+		flex-direction: column;
+		transition: 0.3s;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		overflow-y: auto;
+
+		&[data-open="true"]{
+			transform: translateY(100%) scaleY(1);
+		}
+	}
+
+
+	li{
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding: 6px;
+		transition: 0.2s;
+		cursor: pointer;
+
+		&:hover{
+			background: #C0E8FF;
+		}
+
+		h4{
+			text-transform: uppercase;
+		}
+
+		p{
+			color: #799AAD;
+		}
+	}
+}
