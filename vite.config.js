@@ -7,7 +7,7 @@ const src = resolve(__dirname, './src');
 const _public = resolve(__dirname, './public');
 
 export default defineConfig({
-  base: '/vite-react/',
+  base: '/test-crypto/',
   plugins: [
     react(),
     legacy({ targets: ['IE >= 11'] }),
